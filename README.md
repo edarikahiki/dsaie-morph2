@@ -20,6 +20,6 @@ Lula : Look into antonio's github
 
 Thijs : Pre & Post processing of model
 
-Irham : Dowwnloading ERA5 data
+Irham : Dowwnloading ERA5 data, looking at the model method
 
 Defa : Download DEM and make catchment delineation, quantifying result
