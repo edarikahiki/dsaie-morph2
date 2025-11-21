@@ -7,10 +7,10 @@ https://github.com/antoniomagherini
 To do list:
 1. Download the ERA5 data (rain related)
 2. Find DEM data
-3. Understanding Antonio's work --> summary
-   Preprocessing step
-   Workflow
-   Model
+3. Understanding Antonio's work --> summarize:
+   Preprocessing step;
+   Workflow;
+   Model;
    Quantifying result
 
 
