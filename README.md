@@ -15,7 +15,11 @@ To do list:
 
 
 Work division:
+
 Lula : Look into antonio's github
+
 Thijs : Pre & Post processing of model
+
 Irham : Dowwnloading ERA5 data
+
 Defa : Download DEM and make catchment delineation, quantifying result
