@@ -1,0 +1,28 @@
+Week 3 - Group Project
+
+Presentation preparation
+What we think good about the model. what we think is still missing in the model
+Goal : - try to test the model limitation, is if affected by the input resolution or the method (model architecture) (last year group try to compare, but there are no big differences)
+        either to add more features (includes physics, last group tried to NDVI) or optimizing the current input dataset. We choose the optimizing first
+       - we want to include the small details in the predicting image
+Current model: predict for year, not for months
+Our approach:
+1. What happens if we change the resolution of the image and temporal resolution input for the model
+   a. Current resolution is 30 m. Antonio upscale it to 60 m. We gonna try to upscale to 120 m and use 30 m (the data as it is) 
+       -> if there is an improvement, we might try to downscale to 10 m
+   b. Current temporal scale is 1 month for 1 year. Use 4 years to predict the fifth year 
+      try to improve to: use more years as the input, use more months as input
+      more input data or more combinations. 
+      The model miss small details in channel formation that might be captured by adding more months (by adding more months, we hope that the model will learn the small details of the image)
+      want to know how if we use 4 months to predict 1 month of the next year (make it more general to focus on monthly data)
+   c. Change the reaches size. Now he does 30, what if we increase to 40 (for example)?
+      problems: need to modify the data image (which is know 30 x 60)
+      and other possible combinations
+   Q. ask: are we bounded to predict only for one year? can we predict for the next month? 
+2. What happens if we induced physics : rain (it is now still a big question mark)
+   a. Our plan: use the ERA5 data as input, then try to use it as a weight coefficient for the model
+      basic assumption: we say in drought season, the dry area of braided river morphology is more pronounced
+      Minus: rain doesn't necessarilly contribute dierectly to braided river morphology.    
+3. Training, training, validation size -> leave this out for now.
+   a. Reduce the training size, the validation, and the testing
+
