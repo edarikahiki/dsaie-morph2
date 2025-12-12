@@ -6,6 +6,9 @@ Update progress:
 1. Migrating to google collab
 2. Ran the code in google collab -> found out that google collab CPU could run the training much faster (only 30s per epoch for full dataset)
 
+Some notes:
+1. Think about the running plan if we want to propose to use supercomputer
+
 Work for next week:
 1. Have all the original dataset preprocessed (Thijs)
 2. Have all the preprocessed data splitted to smaller size (Defa)
