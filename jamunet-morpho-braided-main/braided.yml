@@ -1,0 +1,28 @@
+# This environment is intended to be used for running JamUNet and additional notebooks
+
+name: braided
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - ca-certificates
+  - certifi
+  - dash
+  - dask
+  - gdal
+  - importlib-metadata
+  - ipympl
+  - jupyter
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - openpyxl
+  - openssl
+  - pandas
+  - python=3.12
+  - scikit-learn
+  - scipy
+  - seaborn
+  - tabulate
+  - tqdm
+  # - pytorch::cpuonly
