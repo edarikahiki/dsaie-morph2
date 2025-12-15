@@ -1,0 +1,16 @@
+Presentation feedback:
+1. Try to fix semi 3D convolutional network -> problem with handling the third dimension. Last year's group fixed it
+2. With approach 2 (input vs target combination): we can also see possibility that the model fail to capture the time series data
+
+Update progress:
+1. Migrating to google collab
+2. Ran the code in google collab -> found out that google collab CPU could run the training much faster (only 30s per epoch for full dataset)
+
+Some notes:
+1. Think about the running plan if we want to propose to use supercomputer
+
+Work for next week:
+1. Have all the original dataset preprocessed (Thijs)
+2. Have all the preprocessed data splitted to smaller size (Defa)
+3. Fix the 3D semi convolutional network (Irham)
+4. Look at the current model architecture : where we can improve (Lula)
