@@ -1,0 +1,34 @@
+name: braided-gpu
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pytorch=2.2
+  - torchvision
+  - pytorch-cuda=11.8
+  - numpy=1.26
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - dask
+  - opencv
+  - tqdm
+  - tabulate
+  - openpyxl
+  - gdal
+  - dash=2.13.0
+  - importlib-metadata
+  - jupyter
+  - jupyterlab
+  - ipympl
+  - openssl
+  - ca-certificates
+  - certifi
+
+  - pip:
+      - torchinfo
