@@ -145,7 +145,11 @@ def create_datasets(train_val_test, reach, year_target=5, nodata_value=-1, dir_f
     # load list of images (arrays)
     images_array = [load_image_array(list_dir_images[i], scaled_classes=scaled_classes) for i in range(len(list_dir_images))]
     # load season averages
-    avg_imgs = [load_avg(train_val_test, reach, year, dir_averages=r'data/satellite/averages') for year in range(1988, 1988 + len(images_array))]
+    if "30" in dir_folders:
+        dir_averages = r'data/satellite/averages_30'
+    else:
+        dir_averages = r'data/satellite/averages'    
+    avg_imgs = [load_avg(train_val_test, reach, year, dir_averages=dir_averages) for year in range(1988, 1988 + len(images_array))]
     # replace missing data - images are now binary!
     good_images_array = [np.where(image==nodata_value, avg_imgs[i], image) for i, image in enumerate(images_array)]
         
@@ -371,6 +375,12 @@ def create_split_datasets(train_val_test, reach, month, use_dataset, year_end_tr
     Outputs:
             input_dataset, target_dataset = lists of lists, contain the input and target images respectively  
     '''
+    # adjust average folder if using 30m data
+    if "30" in dir_folders:
+        dir_averages = r'data/satellite/averages_30'
+    else:
+        dir_averages = r'data/satellite/averages'
+    
     # list of images' paths
     train_list, val_list, test_list = split_list(train_val_test, reach, month, year_end_train, year_end_val, dir_folders, collection)
     
@@ -378,7 +388,7 @@ def create_split_datasets(train_val_test, reach, month, use_dataset, year_end_tr
         # list of images (arrays)
         images_train = [load_image_array(train_list[i], scaled_classes=scaled_classes) for i in range(len(train_list))]
         # load average images
-        avg_train = [load_avg(train_val_test, reach, year, dir_averages=r'data/satellite/averages') for year in range(1988, 1988 + len(images_train))]
+        avg_train = [load_avg(train_val_test, reach, year, dir_averages=dir_averages) for year in range(1988, 1988 + len(images_train))]
         # replace missing data
         good_images_train = [np.where(image==nodata_value, avg_train[i], image) for i, image in enumerate(images_train)]
         # initialize lists
@@ -392,7 +402,7 @@ def create_split_datasets(train_val_test, reach, month, use_dataset, year_end_tr
     # similar procedure repeated for validation and testing datasets
     elif use_dataset == 'validation':
         images_val = [load_image_array(val_list[i], scaled_classes=scaled_classes) for i in range(len(val_list))]
-        avg_val = [load_avg(train_val_test, reach, year, dir_averages=r'data/satellite/averages') for year in range(year_end_train, year_end_train + len(images_val))]
+        avg_val = [load_avg(train_val_test, reach, year, dir_averages=dir_averages) for year in range(year_end_train, year_end_train + len(images_val))]
         good_images_val = [np.where(image==nodata_value, avg_val[i], image) for i, image in enumerate(images_val)]
         input_val, target_val = [], [] 
         for i in range(len(good_images_val)-year_target):
@@ -403,7 +413,7 @@ def create_split_datasets(train_val_test, reach, month, use_dataset, year_end_tr
 
     elif use_dataset == 'testing':
         images_test = [load_image_array(test_list[i], scaled_classes=scaled_classes) for i in range(len(test_list))]
-        avg_test = [load_avg(train_val_test, reach, year, dir_averages=r'data/satellite/averages') for year in range(year_end_val, year_end_val + len(images_test))]
+        avg_test = [load_avg(train_val_test, reach, year, dir_averages=di_averages) for year in range(year_end_val, year_end_val + len(images_test))]
         good_images_test = [np.where(image==nodata_value, avg_test[i], image) for i, image in enumerate(images_test)]
         input_test, target_test = [], []
         for i in range(len(good_images_test)-year_target):
