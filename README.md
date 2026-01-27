@@ -13,7 +13,7 @@ The project is built based on original work by Antonio Magherini ([Github repo l
 ---
 ## Repository Structure
 This repository is structured as follows:
-- `Meeting Notes` : Consist of notes on weekly progress and other miscellaneous
+- `miscellaneous` : Consist of notes on weekly progress and other miscellaneous
 - `model` : Consist of notebook files to run models and model results
 - `Postprocessing` : Consist of modules for data postprocessing
 - `Preprocessing` : Consist of modules for data preprocessing    
