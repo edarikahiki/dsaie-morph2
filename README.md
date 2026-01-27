@@ -1,7 +1,8 @@
 # Predictive River Morphology with Better JamUNet
 **by group MORPH 2**
 
-Submitted for Data Science and Artificial Inteligence for Engineers (CEGM 2003) Course at Faculty of Civil Engineering & Geoscience, Delft University of Technology\
+Submitted for Data Science and Artificial Inteligence for Engineers (CEGM 2003) Course\
+Faculty of Civil Engineering & Geoscience, Delft University of Technology\
 Final presentation slides can be found at [Final Presentaion](https://www.example.com)
 
 ---
