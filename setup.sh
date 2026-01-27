@@ -1,3 +1,13 @@
+#----------------------------------------------------------------------------------------
+# 1. IF CONDA & ENVIRONMENT ARE NOT INSTALLED IN NEW MACHINE, RUN THIS
+#----------------------------------------------------------------------------------------
+
+# how to run
+# cd /workspace
+# chmod +x setup.sh
+# ./setup.sh
+
+
 #!/bin/bash
 set -e
 
@@ -49,3 +59,19 @@ python -m ipykernel install \
   --user \
   --name "$ENV_NAME" \
   --display-name "Braided"
+
+
+#-------------------------------------------------------------------------------------------------------
+#2. IF CONDA & ENVIRONMENT ARE INSTALLED, RUN THIS TO ACTIVATE THE CORRECT KERNEL
+#-------------------------------------------------------------------------------------------------------
+
+# check if conda is installed
+ls /workspace/miniconda3/bin/conda \
+&& source /workspace/miniconda3/etc/profile.d/conda.sh \
+&& conda --version
+
+# check if conda is installed
+python -m ipykernel install \
+  --user \
+  --name braided-gpu \
+  --display-name "Braided (conda)"
