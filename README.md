@@ -83,6 +83,8 @@ This repository is structured as follows:
 Magherini, A. (2024). *JamUNet: predicting the morphological changes of braided sand-bed rivers with deep learning* (Master’s thesis, Delft University of Technology).  
 https://repository.tudelft.nl/record/uuid:38ea0798-dd3d-4be2-b937-b80621957348
 
+Jean-Francois Pekel, Andrew Cottam, Noel Gorelick, Alan S. Belward, High-resolution mapping of global surface water and its long-term changes. Nature 540, 418-422 (2016). (doi:10.1038/nature20584)
+
 <details>
 <summary>BibTeX</summary>
 
