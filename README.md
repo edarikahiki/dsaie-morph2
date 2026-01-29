@@ -15,8 +15,9 @@ The project is built based on original work by Antonio Magherini ([Github repo l
 This repository is structured as follows:
 - `miscellaneous` : Consist of notes on weekly progress and other miscellaneous
 - `model` : Consist of notebook files to run models and model results
-- `Postprocessing` : Consist of modules for data postprocessing
-- `Preprocessing` : Consist of modules for data preprocessing    
+- `postprocessing` : Consist of modules for data postprocessing
+- `preprocessing` : Consist of modules for data preprocessing
+- `result` : Consist of notebook for plotting selected model output       
 
 ---
 ## Models Explanation
