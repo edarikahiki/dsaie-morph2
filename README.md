@@ -3,12 +3,12 @@
 
 Submitted for Data Science and Artificial Inteligence for Engineers (CEGM 2003) Course\
 Faculty of Civil Engineering & Geoscience, Delft University of Technology\
-Final presentation slides can be found at [Final Presentaion](https://www.example.com)
+Data and Final presentation slides can be found at [Google Drive Link](https://drive.google.com/drive/folders/1CsuHFJwtxO9RDBgfOJRm6s7zZVgCkXf0?usp=sharing)
 
 ---
 ## Project Overview
 
-The project is built based on original work by Antonio Magherini ([Github repo link](https://github.com/antoniomagherini/jamunet-morpho-braided.git)), which tries to make a predictive morphological changes of River Brahmaputra-Jamuna using satellite images input with JamUNet model. Our project goal is to improve the original model by modifying architecture, tuning hyperparameter, trying different input output combination, and using higher input image resolution. We provide 20 different models that experimenting on various settings. The result indicating model improvement with our modified 3D architecture, that ables to incorporate temporal inductive bias better. However, some other results do not perform better than the original model, for example on hyperparameter tuning and using both smaller and larger input sequence. We hope that our work could be useful as recommendation for future similar projects.
+The project is built based on original work by Antonio Magherini ([Github Repo Link](https://github.com/antoniomagherini/jamunet-morpho-braided.git)), which tries to make a predictive morphological changes of River Brahmaputra-Jamuna using satellite images input with JamUNet model. Our project goal is to improve the original model by modifying architecture, tuning hyperparameter, trying different input output combination, and using higher input image resolution. We provide 20 different models that experimenting on various settings. The result indicating model improvement with our modified 3D architecture, that ables to incorporate temporal inductive bias better. However, some other results do not perform better than the original model, for example on hyperparameter tuning and using both smaller and larger input sequence. We hope that our work could be useful as recommendation for future similar projects.
 
 ---
 ## Repository Structure
@@ -26,7 +26,7 @@ This repository is structured as follows:
 
 - <code>00. Original.ipynb</code>: Baseline JamUNet model that predicts the next year water mask for a 4-year input stack. This serves as the reference for all comparisons. 
 
-- <code>01. 25D.ipynb -> NEW NAME 3D</code>: Uses a 3D temporal convolution only in the first block then switches to standard 2D convolutions for the rest of the U-Net
+- <code>01. 25D.ipynb -> ACTUAL MODEL NAME 3D </code>: Uses a 3D temporal convolution only in the first block then switches to standard 2D convolutions for the rest of the U-Net. (The naming 25D is the old name used throughout the notebook)
 
 - <code>02. Semi3D.ipynb</code>: Applies a 3D convolution with temporal kernel dependend on input temporal size dimension in the first block and for the rest of the block perfrom 2D convolution using 3D function with temporal kernel of 1
 
