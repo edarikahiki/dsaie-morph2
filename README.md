@@ -76,7 +76,6 @@ This repository is structured as follows:
 - To run the model with dependencies safely, make sure miniconda & pytorch are installed
 - Use `braided_mod.yml` as environment file
 - Guidance to install conda and environment dependencies can be found in `setup.sh`
-- Due to github storage limitation, input image data (both 60m and 30m resolution) and saved best model are not included 
 ---
 
 ### References
